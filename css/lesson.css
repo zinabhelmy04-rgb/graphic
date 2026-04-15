@@ -1,0 +1,190 @@
+.lesson-container {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-xl) 0;
+}
+
+.lesson-header {
+    grid-column: 1 / -1;
+    margin-bottom: var(--spacing-lg);
+}
+
+.lesson-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.back-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.lesson-progress-info {
+    color: var(--color-text-secondary);
+}
+
+.lesson-meta {
+    display: flex;
+    gap: var(--spacing-lg);
+    color: var(--color-text-secondary);
+    margin-top: var(--spacing-sm);
+}
+
+.lesson-content {
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-sm);
+}
+
+.slide-container {
+    min-height: 300px;
+}
+
+.slide-title {
+    font-size: var(--font-size-2xl);
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-lg);
+}
+
+.slide-body {
+    line-height: 1.8;
+}
+
+.slide-body p {
+    margin-bottom: var(--spacing-md);
+}
+
+.slide-image {
+    max-width: 100%;
+    border-radius: var(--radius-md);
+    margin-top: var(--spacing-lg);
+}
+
+.slide-progress {
+    margin: var(--spacing-xl) 0;
+}
+
+.lesson-controls {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+}
+
+.lesson-sidebar {
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    height: fit-content;
+}
+
+.lesson-sidebar h3 {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-primary);
+}
+
+.slides-list {
+    list-style: none;
+}
+
+.slides-list li {
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: var(--color-text-secondary);
+}
+
+.slides-list li:hover {
+    background-color: var(--color-bg);
+}
+
+.slides-list li.active {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.slides-list li.completed {
+    color: var(--color-secondary);
+    font-weight: 500;
+}
+
+/* تراكب الإتمام */
+.completion-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.completion-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.completion-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-2xl);
+    text-align: center;
+    max-width: 400px;
+    animation: bounceIn 0.5s ease;
+}
+
+.completion-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.completion-card h2 {
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+.completion-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-top: var(--spacing-xl);
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .lesson-container {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson-controls {
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدروس - تعلم الجرافيك</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/lessons.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo">تعلم الجرافيك </a>
+          <nav class="main-nav">
+            <a href="index.html">الرئيسية</a>
+            <a href="lessons.html" class="active">الدروس</a>
+            <a href="progress.html">تقدمي</a>
+          </nav>
+          <div class="user-menu">
+            <span class="user-greeting" id="user-greeting"></span>
+            <button id="logout-btn" class="btn btn-outline btn-small">
+              تسجيل خروج
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="page-header">
+          <h1>الدروس التعليمية</h1>
+          <div class="overall-progress">
+            <span
+              >التقدم الكلي: <span id="overall-progress-text">0%</span></span
+            >
+            <div class="progress-container">
+              <div
+                class="progress-bar"
+                id="overall-progress-bar"
+                style="width: 0%"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lessons-layout">
+          <aside class="modules-sidebar">
+            <h3>الوحدات</h3>
+            <ul class="module-list" id="module-list">
+              <!-- يتم بناؤه ديناميكياً -->
+            </ul>
+          </aside>
+
+          <div class="lessons-content" id="lessons-content">
+            <!-- عرض الدروس -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <div class="container">
+        <p>© 2025 تعلم الجرافيك خطوة بخطوة</p>
+      </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/lessons.js"></script>
+  </body>
+</html>

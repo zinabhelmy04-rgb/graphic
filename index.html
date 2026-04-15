@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تعلم الجرافيك خطوة بخطوة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo"> تعلم الجرافيك </a>
+          <nav class="main-nav">
+            <a href="index.html" class="active">الرئيسية</a>
+            <a href="lessons.html">الدروس</a>
+            <a href="progress.html">تقدمي</a>
+          </nav>
+          <div class="user-menu">
+            <span class="user-greeting" id="user-greeting"></span>
+            <button
+              id="logout-btn"
+              class="btn btn-outline btn-small"
+            >
+              تسجيل خروج
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- قسم الترحيب -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="hero-title">تعلم الجرافيك خطوة بخطوة</h1>
+            <p class="hero-subtitle">
+              أتقن التصميم الجرافيكي من الصفر في دروس مصغرة لا تتجاوز 10 دقائق
+            </p>
+            <div
+              id="progress-summary"
+              class="hero-progress"
+              style="display: none"
+            >
+              <p>
+                أهلاً بك مجدداً! تقدمك: <span id="hero-progress-pct">0%</span>
+              </p>
+              <a href="#" id="continue-btn" class="btn btn-secondary"
+                >أكمل من حيث توقفت</a
+              >
+            </div>
+            <a
+              href="lessons.html"
+              class="btn btn-primary btn-large"
+              id="start-btn"
+              >ابدأ رحلتك الآن</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- إحصائيات سريعة -->
+      <section class="stats-section">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <span class="stat-number">17</span>
+              <span class="stat-label">درساً مصغراً</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">5</span>
+              <span class="stat-label">وحدات تعليمية</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">~2</span>
+              <span class="stat-label">ساعة لإتمام المسار</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- نظرة عامة على الوحدات -->
+      <section class="modules-overview">
+        <div class="container">
+          <h2 class="section-title">مسار التعلم</h2>
+          <div class="modules-grid" id="modules-container">
+            <!-- يتم بناؤه ديناميكياً -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <div class="container">
+        <p>© 2025 تعلم الجرافيك خطوة بخطوة - جميع الحقوق محفوظة</p>
+      </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>

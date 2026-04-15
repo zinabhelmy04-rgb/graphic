@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقدمي - تعلم الجرافيك</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/progress.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span>🎨</span> تعلم الجرافيك
+                </a>
+                <nav class="main-nav">
+                    <a href="index.html">الرئيسية</a>
+                    <a href="lessons.html">الدروس</a>
+                    <a href="progress.html" class="active">تقدمي</a>
+                </nav>
+                <div class="user-menu">
+                    <span class="user-greeting" id="user-greeting"></span>
+                    <button id="logout-btn" class="btn btn-outline btn-small">تسجيل خروج</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="progress-page">
+                <div class="page-header">
+                    <h1>تقدمك في التعلم</h1>
+                    <button id="reset-progress" class="btn btn-outline">إعادة ضبط التقدم</button>
+                </div>
+                
+                <div class="overall-progress-card">
+                    <h2>التقدم الكلي</h2>
+                    <div class="progress-circle-container">
+                        <div class="progress-circle" id="progress-circle">
+                            <span id="progress-percentage">0%</span>
+                        </div>
+                    </div>
+                    <p id="progress-summary-text">0 من 17 درس مكتمل</p>
+                </div>
+                
+                <div class="modules-progress">
+                    <h2>تقدم الوحدات</h2>
+                    <div class="modules-progress-list" id="modules-progress-list">
+                        <!-- يتم بناؤه ديناميكياً -->
+                    </div>
+                </div>
+                
+                <div class="recent-activity">
+                    <h2>آخر نشاط</h2>
+                    <div id="activity-info" class="activity-card">
+                        <!-- معلومات النشاط -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="app-footer">
+        <div class="container">
+            <p>© 2025 تعلم الجرافيك خطوة بخطوة</p>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/progress-page.js"></script>
+</body>
+</html>

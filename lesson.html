@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدرس - تعلم الجرافيك</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/lesson.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo">تعلم الجرافيك </a>
+          <nav class="main-nav">
+            <a href="index.html">الرئيسية</a>
+            <a href="lessons.html">الدروس</a>
+            <a href="progress.html">تقدمي</a>
+          </nav>
+          <div class="user-menu">
+            <span class="user-greeting" id="user-greeting"></span>
+            <button id="logout-btn" class="btn btn-outline btn-small">
+              تسجيل خروج
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="lesson-container">
+          <div class="lesson-header">
+            <div class="lesson-navigation">
+              <a href="lessons.html" class="back-link">← العودة للدروس</a>
+              <div class="lesson-progress-info">
+                <span id="lesson-progress-text">الشريحة 1 من 3</span>
+              </div>
+            </div>
+            <h1 id="lesson-title">عنوان الدرس</h1>
+            <div class="lesson-meta">
+              <span id="lesson-duration"></span>
+              <span id="lesson-slides-count"></span>
+            </div>
+          </div>
+
+          <div class="lesson-content">
+            <div class="slide-container" id="slide-container">
+              <!-- المحتوى الديناميكي للشريحة -->
+            </div>
+
+            <div class="slide-progress">
+              <div class="progress-container">
+                <div
+                  class="progress-bar"
+                  id="slide-progress-bar"
+                  style="width: 0%"
+                ></div>
+              </div>
+            </div>
+
+            <div class="lesson-controls">
+              <button id="btn-prev" class="btn btn-outline" disabled>
+                السابق
+              </button>
+              <button id="btn-next" class="btn btn-primary">التالي</button>
+              <button
+                id="btn-complete"
+                class="btn btn-primary"
+                style="display: none"
+              >
+                إتمام الدرس
+              </button>
+            </div>
+          </div>
+
+          <div class="lesson-sidebar">
+            <h3>شرائح الدرس</h3>
+            <ul class="slides-list" id="slides-list">
+              <!-- قائمة الشرائح -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- تراكب إتمام الدرس -->
+    <div class="completion-overlay" id="completion-overlay">
+      <div class="completion-card">
+        <h2>أحسنت!</h2>
+        <p>لقد أكملت الدرس بنجاح</p>
+        <div class="completion-actions">
+          <a href="#" id="next-lesson-btn" class="btn btn-primary"
+            >الدرس التالي</a
+          >
+          <a href="lessons.html" class="btn btn-outline">العودة للدروس</a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="app-footer">
+      <div class="container">
+        <p>© 2025 تعلم الجرافيك خطوة بخطوة</p>
+      </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/lesson.js"></script>
+  </body>
+</html>
